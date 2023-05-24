@@ -1,7 +1,10 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:face_recoginition/marico_ui/maricoHome.dart';
+import 'package:face_recoginition/quiz_app/QuizHome.dart';
 import 'package:flutter/material.dart';
 
+import 'animations/Animations.dart';
+import 'custom_ui/CustomWidgets.dart';
 import 'face_recognition/FaceDetectorView.dart';
 import 'food_delivery_screens/menuScreen.dart';
 import 'food_delivery_screens/orderScreen.dart';
@@ -15,7 +18,9 @@ void main() {
       // home: FirstScreen()));
        //home: MenuPage()));
       // home: OrderPage()));
-       home: MaricoHome()));
+      // home: MaricoHome()));
+      // home: QuizHome()));
+       home: CustomUI()));
 }
 
 class MyApp extends StatelessWidget {

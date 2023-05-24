@@ -420,16 +420,13 @@ class _MaricoHome extends State<MaricoHome> {
             drawerCard(Icons.edit,"Change PIN"),
           ],
         ),
-    Padding(
-      padding: const EdgeInsets.only(top:110.0,left:10),
+    Expanded(
       child: Align(
       alignment: Alignment.bottomLeft,
       child:
       Container(
-      // decoration: BoxDecoration(
-      //      borderRadius: BorderRadius.all(Radius.circular(20),),
-      //   color: Colors.indigo,),
                   width: 120,
+                  margin: EdgeInsets.all(20),
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
