@@ -40,6 +40,7 @@ dependencies:
   camera: ^0.10.3+2
   polygon_clipper: ^1.0.2
   dotted_border: ^2.0.0+3
+  go_router: ^7.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

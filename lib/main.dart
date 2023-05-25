@@ -1,7 +1,9 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:face_recoginition/custom_ui/DetailScreen.dart';
 import 'package:face_recoginition/marico_ui/maricoHome.dart';
 import 'package:face_recoginition/quiz_app/QuizHome.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'animations/Animations.dart';
 import 'custom_ui/CustomWidgets.dart';
@@ -20,9 +22,31 @@ void main() {
       // home: OrderPage()));
       // home: MaricoHome()));
       // home: QuizHome()));
-       home: CustomUI()));
+       //home: CustomUI()));
+  routes: {
+    '/': (context) => CustomUI(),
+  '/details': (context) => DetailScreen(),
 }
-
+  ));
+}
+final GoRouter _router = GoRouter(
+  routes: <RouteBase>[
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return CustomUI();
+      },
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'details',
+          builder: (BuildContext context, GoRouterState state) {
+            return DetailScreen();
+          },
+        ),
+      ],
+    ),
+  ],
+);
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
